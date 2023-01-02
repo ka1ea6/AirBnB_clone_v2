@@ -47,11 +47,11 @@ class DBStorage:
             if isinstance(cls, str) and cls in classes:
                 query = self.__session.query(classes[cls]).all()
                 for instance in query:
-                    result[f"{instance.__class__.__name__.__name__}.{instance.id}"] = instance
+                    result[f"{instance.__class__.__name__}.{instance.id}"] = instance
             elif cls.__name__ in classes:
                 query = self.__session.query(cls).all()
                 for instance in query:
-                    result[f"{instance.__class__.__name__.__name__}.{instance.id}"] = instance
+                    result[f"{instance.__class__.__name__}.{instance.id}"] = instance
 
         else:
             for to_fetch in classes.values():
