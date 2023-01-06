@@ -1,5 +1,5 @@
 -- SQL script to prepare a mysql server for the project
--- Creates a database if it does not exist
+-- Creates the database hbnb_dev_db if it does not exist
 CREATE DATABASE IF NOT EXISTS hbnb_dev_db;
 -- Creates a user for using the database
 CREATE USER IF NOT EXISTS 'hbnb_dev'@'localhost' IDENTIFIED BY 'hbnb_dev_pwd';
