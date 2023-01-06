@@ -59,9 +59,9 @@ class BaseModel:
         """Convert instance into dict format"""
         dict_copy = self.__dict__.copy()
         dict_copy["__class__"] = self.__class__.__name__
-        if isinstance(self.updated_at, str):
+        if not isinstance(self.updated_at, str):
             dict_copy["updated_at"] = self.updated_at.strftime(time_format)
-        if isinstance(self.created_at, str):
+        if not isinstance(self.created_at, str):
             dict_copy["created_at"] = self.created_at.strftime(time_format)
         if '_sa_instance_state' in dict_copy:
             del dict_copy['_sa_instance_state']
