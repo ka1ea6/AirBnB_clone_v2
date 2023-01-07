@@ -1,1 +1,46 @@
-{"State.4de40346-44c5-49b8-95ff-07b12288b954": {"name": "\"California\"", "created_at": "2023-01-06T19:24:51.276478", "updated_at": "2023-01-06T19:24:51.276659", "id": "4de40346-44c5-49b8-95ff-07b12288b954", "__class__": "State"}, "State.91b8680c-55c6-4b7c-920a-eeaed65029d4": {"name": "\"Arizona\"", "created_at": "2023-01-06T19:24:51.277620", "updated_at": "2023-01-06T19:24:51.277696", "id": "91b8680c-55c6-4b7c-920a-eeaed65029d4", "__class__": "State"}, "Place.38de5f9e-31bc-4155-8602-9b890fadff60": {"city_id": "\"0001\"", "user_id": "\"0001\"", "name": "\"My_little_house\"", "number_rooms": 4, "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "created_at": "2023-01-06T19:24:51.279955", "updated_at": "2023-01-06T19:24:51.280138", "id": "38de5f9e-31bc-4155-8602-9b890fadff60", "__class__": "Place"}, "State.b399af58-9ddd-43f0-9f87-e85f1fe2020e": {"name": "\"California\"", "created_at": "2023-01-07T19:38:47.029255", "updated_at": "2023-01-07T19:38:47.029594", "id": "b399af58-9ddd-43f0-9f87-e85f1fe2020e", "__class__": "State"}, "City.8b04e1e2-db2a-4d24-aa57-c551c4b24897": {"state_id": "\"b399af58-9ddd-43f0-9f87-e85f1fe2020e\"", "name": "\"San_Francisco_is_super_cool\"", "created_at": "2023-01-07T19:39:48.899790", "updated_at": "2023-01-07T19:39:48.899963", "id": "8b04e1e2-db2a-4d24-aa57-c551c4b24897", "__class__": "City"}}
+{
+  "State.4de40346-44c5-49b8-95ff-07b12288b954": {
+    "name": "\"California\"",
+    "created_at": "2023-01-06T19:24:51.276478",
+    "updated_at": "2023-01-06T19:24:51.276659",
+    "id": "4de40346-44c5-49b8-95ff-07b12288b954",
+    "__class__": "State"
+  },
+  "State.91b8680c-55c6-4b7c-920a-eeaed65029d4": {
+    "name": "\"Arizona\"",
+    "created_at": "2023-01-06T19:24:51.277620",
+    "updated_at": "2023-01-06T19:24:51.277696",
+    "id": "91b8680c-55c6-4b7c-920a-eeaed65029d4",
+    "__class__": "State"
+  },
+  "Place.38de5f9e-31bc-4155-8602-9b890fadff60": {
+    "city_id": "\"0001\"",
+    "user_id": "\"0001\"",
+    "name": "\"My_little_house\"",
+    "number_rooms": 4,
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "created_at": "2023-01-06T19:24:51.279955",
+    "updated_at": "2023-01-06T19:24:51.280138",
+    "id": "38de5f9e-31bc-4155-8602-9b890fadff60",
+    "__class__": "Place"
+  },
+  "State.b399af58-9ddd-43f0-9f87-e85f1fe2020e": {
+    "name": "\"California\"",
+    "created_at": "2023-01-07T19:38:47.029255",
+    "updated_at": "2023-01-07T19:38:47.029594",
+    "id": "b399af58-9ddd-43f0-9f87-e85f1fe2020e",
+    "__class__": "State"
+  },
+  "City.8b04e1e2-db2a-4d24-aa57-c551c4b24897": {
+    "state_id": "\"b399af58-9ddd-43f0-9f87-e85f1fe2020e\"",
+    "name": "\"San_Francisco_is_super_cool\"",
+    "created_at": "2023-01-07T19:39:48.899790",
+    "updated_at": "2023-01-07T19:39:48.899963",
+    "id": "8b04e1e2-db2a-4d24-aa57-c551c4b24897",
+    "__class__": "City"
+  }
+}

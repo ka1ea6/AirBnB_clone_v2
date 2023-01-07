@@ -7,3 +7,4 @@ CREATE USER IF NOT EXISTS 'hbnb_test'@'localhost' IDENTIFIED BY 'hbnb_test_pwd';
 GRANT ALL PRIVILEGES ON hbnb_test_db.* TO 'hbnb_test'@'localhost';
 -- Grants select privileges to 'hbnb_test' on the 'performance_shcema' databasew
 GRANT SELECT ON performance_schema.* TO 'hbnb_test'@'localhost';
+FLUSH PREVILEGES;
