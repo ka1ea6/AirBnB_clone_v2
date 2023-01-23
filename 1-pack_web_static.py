@@ -15,7 +15,7 @@ def do_pack():
     file_name = f"versions/web_static_{dt.year}{dt.month}{dt.day}{dt.hour}{dt.minute}{dt.second}.tgz"
 
     if path.isdir("versions") is False:
-        if local("mkdir -p /versions").failed is True:
+        if local("mkdir -p versions").failed is True:
             return None
     if local(f"tar -cfvz {file_name} web_static").failed is True:
         return None
