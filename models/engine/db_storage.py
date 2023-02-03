@@ -81,3 +81,7 @@ class DBStorage:
         Session = scoped_session(session_factory)
 
         self.__session = Session()
+
+    def close(self):
+        '''Method used for removing element'''
+        self.__session.remove()
