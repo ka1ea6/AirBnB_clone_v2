@@ -10,13 +10,13 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", strict_slashes=False)
 def index():
     '''Displays Hello, HBNB for requests to /'''
     return 'Hello, HBNB!'
 
 
-@app.route("/hbnb")
+@app.route("/hbnb", strict_slashes=False)
 def hbnb():
     '''Displays HBNB for requests to /hbnb'''
     return 'HBNB'

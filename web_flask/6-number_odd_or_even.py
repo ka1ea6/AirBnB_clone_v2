@@ -10,31 +10,31 @@ from flask import Flask, escape, render_template
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", strict_slashes=False)
 def index():
     '''Displays Hello, HBNB for requests to /'''
     return 'Hello, HBNB!'
 
 
-@app.route("/hbnb")
+@app.route("/hbnb", strict_slashes=False)
 def hbnb():
     '''Displays HBNB for requests to /hbnb'''
     return 'HBNB'
 
 
-@app.route("/c/<text>")
+@app.route("/c/<text>", strict_slashes=False)
 def c_is_fun(text):
     '''Displays "c" followed by the value of text'''
     return 'C %s' % escape(text.replace("_", " "))
 
 
-@app.route("/python/<text>")
+@app.route("/python/<text>", strict_slashes=False)
 def python_is_cool(text="is cool"):
     '''Displays "python" folllowed by the value of text'''
     return 'Python %s' % escape(text.replace("_", " "))
 
 
-@app.route("/number/<int:n>")
+@app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
     '''Displays "n" is a number if n is an integer'''
     if isinstance(n, int):
@@ -43,7 +43,7 @@ def number(n):
         return ''
 
 
-@app.route("/number_template/<int:n>")
+@app.route("/number_template/<int:n>", strict_slashes=False)
 def number_template(n=None):
     '''Display an html page only if n is an integer'''
     if isinstance(n, int):
@@ -52,7 +52,7 @@ def number_template(n=None):
         return ''
 
 
-@app.route("/number_odd_or_even/<int:n>")
+@app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
 def number_odd_or_even(n=None):
     '''Display an html page only if n is an integer'''
     if isinstance(n, int):
