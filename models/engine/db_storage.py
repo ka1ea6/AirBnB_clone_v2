@@ -84,4 +84,4 @@ class DBStorage:
 
     def close(self):
         '''Method used for removing element'''
-        self.__session.remove()
+        self.__session.close()
