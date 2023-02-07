@@ -31,7 +31,10 @@ def c_is_fun(text):
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def python_is_cool(text="is cool"):
-    '''Displays "python" folllowed by the value of text'''
+    """Displays 'Python' followed by the value of <text>.
+
+    Replaces any underscores in <text> with slashes.
+    """
     text = text.replace("_", " ")
     return f"Python {text}"
 
