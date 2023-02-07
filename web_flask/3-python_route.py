@@ -28,10 +28,12 @@ def c_is_fun(text):
     return 'C %s' % escape(text.replace("_", " "))
 
 
+@app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def python_is_cool(text="is cool"):
     '''Displays "python" folllowed by the value of text'''
-    return 'Python %s' % escape(text.replace("_", " "))
+    text = text.replace("_", " ")
+    return f"Python {text}"
 
 
 if __name__ == "__main__":

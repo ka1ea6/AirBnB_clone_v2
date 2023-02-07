@@ -7,16 +7,22 @@ to 0.0.0.0 port 5000
 
 from models import storage
 from flask import Flask, render_template
+from os import getenv
+
+storage_type = getenv("HBNB_TYPE_STORAGE")
 
 app = Flask(__name__)
 
 
-@app.route("/states_list", strict_slashes=False)
+@app.route("/hbnb_filters", strict_slashes=False)
 def states_list():
     '''Method to render an HTML page'''
-
     states = storage.all("State")
-    return render_template("7-states_list.html", states=states)
+    amenities = storage.all("Amenity")
+    for amenity in amenities.values():
+        print(amenity)
+        print()
+    return render_template("10-hbnb_filters.html", states=states, amenities=amenities)
 
 
 @app.teardown_appcontext
