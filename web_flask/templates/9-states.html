@@ -7,26 +7,19 @@
     {% if state is mapping %}
     <h1>States</h1>
     <ul>
-      {% for state in states.values() | sort(attribute="name") %}
-      <li>{{ state.id }}: <b>{{ state.name }}</b></li>
+      {% for s in state.values()|sort(attribute="name") %}
+      <li>{{ s.id }}: <b>{{ s.name }}</b></li>
       {% endfor %}
     </ul>
     {% elif state is defined %}
-    <h1>State: Illinois</h1>
+    <h1>State: {{ state.name }}</h1>
     <h3>Cities:</h3>
     <ul>
-      <li>521a55f4-7d82-47d9-b54c-a76916479552: <b>Chicago</b></li>
-
-      <li>561a55f4-7d82-47d9-b54c-a76916479552: <b>Joliet</b></li>
-
-      <li>541a55f4-7d82-47d9-b54c-a76916479552: <b>Naperville</b></li>
-
-      <li>531a55f4-7d82-47d9-b54c-a76916479552: <b>Peoria</b></li>
-
-      <li>551a55f4-7d82-47d9-b54c-a76916479552: <b>Urbana</b></li>
+      {% for city in state.cities|sort(attribute="name") %}
+      <li>{{ city.id }}: <b>{{ city.name }}</b></li>
+      {% endfor %}
     </ul>
     {% else %}
-
     <h1>Not found!</h1>
     {% endif %}
   </body>
